@@ -13,6 +13,7 @@ import requests
 TOKEN = os.getenv('TOKEN_REALBOT')
 GUILD = os.getenv('DISCORD_GUILD')
 URI_CAMBIARFOTO = os.getenv('URI_CAMBIARFOTO')
+
 # inicializando el bot
 client = discord.Client()
 bot = commands.Bot(command_prefix='R! ')
