@@ -68,9 +68,8 @@ async def deleteCarrete(ctx, id):
 
 @bot.command(name='cambiaFoto')
 async def cambiaFoto(ctx, link, rut):
-    URI = 'https://sgu.utem.cl/pgai/perfil_foto.php'
     f = open('temp_photo.jpg', 'wb')
-    f.write(urllib.request.urlopen(link).read())
+    f.write(urllib.request.urlopen(URI_CAMBIARFOTO).read())
     f.close()
     photo = open('temp_photo.jpg','rb').read()
     data = {
