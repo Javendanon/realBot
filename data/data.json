@@ -1,16 +1,1 @@
-{
-    "carretes": [
-        {
-          "id": 1,
-          "ubicacion": "none",
-          "desc": "No tiene",
-  
-        },
-        {
-          "id": 2,
-          "ubicacion": "none2",
-          "desc": "No tiene2",
-        }   
-    ],
-    "masInfo": 0
-}
+{"carretes": [{"id": 1, "ubicacion": "test1", "desc": "test1", "fecha": "18/02/2020"}, {"id": 2, "ubicacion": "test2", "desc": "test2", "fecha": "18/02/2020"}, {"id": 3, "ubicacion": "test3", "desc": "test3", "fecha": "03/02/2020"}]}
