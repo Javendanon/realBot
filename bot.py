@@ -12,6 +12,7 @@ import requests
 # Cargando datos del bot
 TOKEN = os.getenv('TOKEN_REALBOT')
 GUILD = os.getenv('DISCORD_GUILD')
+URI_CAMBIARFOTO = os.getenv('URI_CAMBIARFOTO')
 # inicializando el bot
 client = discord.Client()
 bot = commands.Bot(command_prefix='R! ')
@@ -68,9 +69,8 @@ async def deleteCarrete(ctx, id):
 
 @bot.command(name='cambiaFoto')
 async def cambiaFoto(ctx, link, rut):
-    URI = 'https://sgu.utem.cl/pgai/perfil_foto.php'
     f = open('temp_photo.jpg', 'wb')
-    f.write(urllib.request.urlopen(link).read())
+    f.write(urllib.request.urlopen(URI_CAMBIARFOTO).read())
     f.close()
     photo = open('temp_photo.jpg','rb').read()
     data = {
@@ -87,7 +87,6 @@ async def getMalla(ctx):
     # emoji = discord.utils.get(guild.emojis,name='Kappucha')
     # emoji = discord.utils.get(guild.emojis, name='LUL')
     # print (emoji)
-    uri = 'https://cdn.discordapp.com/attachments/604360454227099648/604360478470307850/Malla.png'
     # emoji = 
     with open('malla.png','rb') as malla:
         await ctx.send(file = discord.File(malla, 'malla.png'))
