@@ -1,0 +1,16 @@
+{
+    "carretes": [
+        {
+          "id": 1,
+          "ubicacion": "none",
+          "desc": "No tiene",
+  
+        },
+        {
+          "id": 2,
+          "ubicacion": "none2",
+          "desc": "No tiene2",
+        }   
+    ],
+    "masInfo": 0
+}
