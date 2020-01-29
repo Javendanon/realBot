@@ -13,8 +13,8 @@ from gtts import gTTS
 
 # Cargando datos del bot
 TOKEN = os.getenv('TOKEN_REALBOT')
-# GUILD = os.getenv('DISCORD_GUILD')
 URI_CAMBIARFOTO = os.getenv('URI_CAMBIARFOTO')
+TLD = os.getenv(TLD_GTTS)
 
 bot = commands.Bot(command_prefix='R! ')
 
@@ -56,7 +56,7 @@ def getGtts(members):
         'Aliade deconstruide y la puta que te parió'
     ]
     tts = members[targetMember] + phrase[random.randint(0,len(phrase)-1)]
-    gtts = gTTS(tts, lang='es-us',tld='cl')
+    gtts = gTTS(tts, lang='es-us',tld=TLD)
     with open('message.mp3','wb') as file:
         gtts.write_to_fp(file)
     
