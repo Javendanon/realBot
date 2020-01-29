@@ -14,7 +14,7 @@ from gtts import gTTS
 # Cargando datos del bot
 TOKEN = os.getenv('TOKEN_REALBOT')
 URI_CAMBIARFOTO = os.getenv('URI_CAMBIARFOTO')
-TLD = os.getenv(TLD_GTTS)
+TLD = os.getenv('TLD_GTTS')
 
 bot = commands.Bot(command_prefix='R! ')
 
